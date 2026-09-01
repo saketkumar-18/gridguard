@@ -1,0 +1,207 @@
+{
+  "model": "lgbm",
+  "n_features": 22,
+  "feature_names": [
+    "mean_cons",
+    "std_cons",
+    "min_cons",
+    "q25_cons",
+    "median_cons",
+    "q75_cons",
+    "max_cons",
+    "cv_cons",
+    "skew_cons",
+    "kurt_cons",
+    "zero_ratio",
+    "long_zero_run",
+    "weekday_mean",
+    "weekend_mean",
+    "weekend_ratio",
+    "month_spread",
+    "half_ratio",
+    "trend_slope",
+    "mad_daily",
+    "std_diff",
+    "pct_change_mean",
+    "zero_run_norm"
+  ],
+  "window_days": 90,
+  "scorer": "onnx-float32 (deployed)",
+  "thresholds": {
+    "high": 0.740912,
+    "balanced": 0.622895
+  },
+  "metrics": {
+    "window": {
+      "roc_auc": 0.6879,
+      "pr_auc": 0.2356
+    },
+    "consumer_mean": {
+      "roc_auc": 0.7679,
+      "pr_auc": 0.2808,
+      "f1": 0.2744,
+      "precision": 0.3505,
+      "recall": 0.2254,
+      "top1p_precision": 0.5357,
+      "top5p_precision": 0.3664,
+      "base_rate": 0.0853,
+      "lift_top1p": 6.28,
+      "n": 8475,
+      "n_theft": 723,
+      "cm": [
+        [
+          7450,
+          302
+        ],
+        [
+          560,
+          163
+        ]
+      ]
+    },
+    "consumer_max": {
+      "roc_auc": 0.7705,
+      "pr_auc": 0.3197,
+      "f1": 0.2825,
+      "precision": 0.1791,
+      "recall": 0.668,
+      "top1p_precision": 0.619,
+      "top5p_precision": 0.4208,
+      "base_rate": 0.0853,
+      "lift_top1p": 7.26,
+      "n": 8475,
+      "n_theft": 723,
+      "cm": [
+        [
+          5538,
+          2214
+        ],
+        [
+          240,
+          483
+        ]
+      ]
+    },
+    "sklearn_diag": {
+      "roc_auc": 0.6886,
+      "spearman_vs_onnx": 0.98247,
+      "f32_noise_median": 0.0,
+      "f32_noise_p999": 0.2036,
+      "f32_noise_max": 0.2835
+    }
+  },
+  "cv_table": [
+    {
+      "model": "lgbm",
+      "cv_roc_auc": 0.6686,
+      "cv_pr_auc": 0.2118
+    },
+    {
+      "model": "rf",
+      "cv_roc_auc": 0.6626,
+      "cv_pr_auc": 0.206
+    },
+    {
+      "model": "logreg",
+      "cv_roc_auc": 0.6221,
+      "cv_pr_auc": 0.178
+    }
+  ],
+  "importances": {
+    "mean_cons": 0.022379,
+    "std_cons": 0.050605,
+    "min_cons": 0.054516,
+    "q25_cons": 0.037056,
+    "median_cons": 0.029718,
+    "q75_cons": 0.030806,
+    "max_cons": 0.051855,
+    "cv_cons": 0.053629,
+    "skew_cons": 0.061935,
+    "kurt_cons": 0.063548,
+    "zero_ratio": 0.023548,
+    "long_zero_run": 0.026452,
+    "weekday_mean": 0.019677,
+    "weekend_mean": 0.03629,
+    "weekend_ratio": 0.084315,
+    "month_spread": 0.061411,
+    "half_ratio": 0.055363,
+    "trend_slope": 0.059516,
+    "mad_daily": 0.047661,
+    "std_diff": 0.052218,
+    "pct_change_mean": 0.075403,
+    "zero_run_norm": 0.002097
+  },
+  "honest_median": {
+    "mean_cons": 4.904944,
+    "std_cons": 1.118303,
+    "min_cons": 1.636326,
+    "q25_cons": 3.6225,
+    "median_cons": 4.555,
+    "q75_cons": 5.66,
+    "max_cons": 9.46,
+    "cv_cons": 0.261675,
+    "skew_cons": 0.331315,
+    "kurt_cons": 0.044263,
+    "zero_ratio": 0.0,
+    "long_zero_run": 0.0,
+    "weekday_mean": 4.87,
+    "weekend_mean": 4.954231,
+    "weekend_ratio": 1.0,
+    "month_spread": 0.195442,
+    "half_ratio": 1.0,
+    "trend_slope": 0.0,
+    "mad_daily": 0.705335,
+    "std_diff": 1.092873,
+    "pct_change_mean": 0.188746,
+    "zero_run_norm": 0.0
+  },
+  "honest_q25": {
+    "mean_cons": 1.033,
+    "std_cons": 0.0,
+    "min_cons": 0.0,
+    "q25_cons": 0.337677,
+    "median_cons": 0.68,
+    "q75_cons": 1.12,
+    "max_cons": 2.63,
+    "cv_cons": 0.0,
+    "skew_cons": 0.0,
+    "kurt_cons": 0.0,
+    "zero_ratio": 0.0,
+    "long_zero_run": 0.0,
+    "weekday_mean": 1.028308,
+    "weekend_mean": 1.024213,
+    "weekend_ratio": 0.982433,
+    "month_spread": 0.0,
+    "half_ratio": 0.885097,
+    "trend_slope": -0.009807,
+    "mad_daily": 0.0,
+    "std_diff": 0.0,
+    "pct_change_mean": 0.0,
+    "zero_run_norm": 0.0
+  },
+  "honest_q75": {
+    "mean_cons": 9.72,
+    "std_cons": 2.825378,
+    "min_cons": 4.74,
+    "q25_cons": 7.812865,
+    "median_cons": 9.295,
+    "q75_cons": 11.1725,
+    "max_cons": 18.48,
+    "cv_cons": 0.476587,
+    "skew_cons": 1.202995,
+    "kurt_cons": 2.278525,
+    "zero_ratio": 0.033333,
+    "long_zero_run": 1.0,
+    "weekday_mean": 9.665326,
+    "weekend_mean": 9.83,
+    "weekend_ratio": 1.045659,
+    "month_spread": 0.487782,
+    "half_ratio": 1.085567,
+    "trend_slope": 0.005226,
+    "mad_daily": 1.766742,
+    "std_diff": 2.548159,
+    "pct_change_mean": 0.31424,
+    "zero_run_norm": 0.011111
+  },
+  "precision_target": 0.35
+}

@@ -1,0 +1,15 @@
+{
+  "n_consumers": 42372,
+  "n_days": 1034,
+  "n_theft": 3615,
+  "theft_pct": 8.532,
+  "missing_pct_overall": 25.64,
+  "first_day": "2014-01-01",
+  "last_day": "2016-10-31",
+  "window_days": 90,
+  "n_windows": 12,
+  "mean_daily_kwh_honest": 7.6024,
+  "mean_daily_kwh_theft": 26.6145,
+  "zero_readings_pct_honest": 13.6693,
+  "zero_readings_pct_theft": 8.3111
+}

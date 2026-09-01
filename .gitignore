@@ -1,0 +1,25 @@
+# data
+data/raw/
+data/processed/
+!tests/data/
+
+# python
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+
+# node / web
+node_modules/
+web/dist/
+web/node_modules/
+*.local
+
+# models: keep ONNX + meta (small, needed by web); ignore bulky pickles
+models/*.pkl
+models/*.joblib
+
+# os
+.DS_Store
+Thumbs.db
+.vercel/
