@@ -15,9 +15,9 @@ web/dist/
 web/node_modules/
 *.local
 
-# models: keep ONNX + meta (small, needed by web); ignore bulky pickles
-models/*.pkl
-models/*.joblib
+# models: keep ONNX + meta + final estimator (CI needs the sklearn path);
+# ignore only the bulky CV cache
+models/cv_state.joblib
 
 # os
 .DS_Store
