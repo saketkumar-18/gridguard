@@ -1,5 +1,8 @@
 # ⚡ GridGuard — Electricity Theft Detection from Smart Meter Data
 
+[![CI](https://github.com/saketkumar-18/gridguard/actions/workflows/ci.yml/badge.svg)](https://github.com/saketkumar-18/gridguard/actions/workflows/ci.yml)
+[![Live](https://img.shields.io/badge/live-demo-22d3ee)](https://web-seven-theta-12.vercel.app)
+
 **Anomaly detection on smart-meter consumption patterns to flag electricity theft / leakage — a production-grade pipeline + in-browser scoring demo built on the public SGCC benchmark (42,372 consumers × 1,034 days, 8.53% flagged theft).**
 
 > Indian DISCOMs lose a large share of purchased power to theft and billing
@@ -9,10 +12,12 @@
 
 ## Live demo
 
-**https://gridguard.vercel.app** — 100 real SGCC consumers scored **in your
+**https://web-seven-theta-12.vercel.app** — 100 real SGCC consumers scored **in your
 browser** (ONNX Runtime Web, WASM): no data leaves the page, no server
 inference. Includes an "analyze your own series" mode — paste daily kWh
 readings, get a risk score + explanation.
+
+**Repo**: https://github.com/saketkumar-18/gridguard — CI (pytest + vitest + build) green.
 
 ## What it does
 
